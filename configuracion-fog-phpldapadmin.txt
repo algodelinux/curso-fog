@@ -1,0 +1,2 @@
+dhcpstatements: if option arch = 00:07 {filename "syslinux.efi";} else {filename "/classic/pxelinux.0";}
+dhcpstatements: next-server <ip_servidor_FOG>
