@@ -46,6 +46,7 @@ ALTER USER 'fogstorage'@'localhost' IDENTIFIED BY 'TuNuevaContraseña';
 -- Aplicar cambios inmediatamente y salir
 FLUSH PRIVILEGES;
 EXIT; 
+
 ```
 
 💡 Nota: Si tu versión de MySQL/MariaDB es muy antigua y el comando ALTER USER da error, utiliza: SET PASSWORD FOR 'fogstorage'@'%' = PASSWORD('TuNuevaContraseña');
@@ -66,18 +67,21 @@ El servidor FOG principal actúa como un nodo de almacenamiento para sí mismo y
 
 ```bash
 sudo nano /opt/fog/.fogsettings 
+
 ```
 
 Busca la línea storagepass='...' y actualízala con tu nueva contraseña:
 
 ```bash
 storagepass='TuNuevaContraseña' 
+
 ```
 
 2. Editar archivo de configuración web (FOG Core):
 
 ```bash
 sudo nano /var/www/html/fog/lib/fog/config.class.php 
+
 ```
 
 ✅ Conclusión
