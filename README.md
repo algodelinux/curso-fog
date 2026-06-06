@@ -49,7 +49,7 @@ EXIT;
 
 ```
 
-💡 Nota: Si tu versión de MySQL/MariaDB es muy antigua y el comando ALTER USER da error, utiliza: SET PASSWORD FOR 'fogstorage'@'%' = PASSWORD('TuNuevaContraseña');
+💡 **Nota**: Si tu versión de MySQL/MariaDB es muy antigua y el comando ALTER USER da error, utiliza: SET PASSWORD FOR 'fogstorage'@'%' = PASSWORD('TuNuevaContraseña');
 
 ### Paso 2: Actualizar la interfaz web de FOG
 Una vez que el servidor MySQL real ya conoce la nueva clave, sincroniza la plataforma web:
@@ -84,5 +84,6 @@ sudo nano /var/www/html/fog/lib/fog/config.class.php
 
 ```
 
-✅ Conclusión
+✅ **Conclusión**  
+
 Siguiendo este flujo de trabajo (MySQL ➡️ Panel Web ➡️ Archivos locales), todos los componentes del ecosistema FOG volverán a estar sincronizados. A partir de este momento, cualquier instalador de un nuevo Storage Node podrá conectarse al servidor principal de manera exitosa y sin errores de credenciales.
